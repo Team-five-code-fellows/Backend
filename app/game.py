@@ -1,4 +1,4 @@
-from scraper import get_links
+from app.scraper import get_links
 
 base_url = "https://en.wikipedia.org"
 
@@ -53,20 +53,32 @@ def play_game():
     current_page = start_page
 
     # loop that contains turn actions
-    while counter < turn_count and current_page != end_page:
+
+    # while counter < turn_count and current_page != end_page:
+    while counter < turn_count:
         # add current page to page path list
         path.append(current_page)# TODO append scrubbed value of page
-        # Scrape current page for all links # TODO bring in scraper method
-        #link_list = scraper()
+        # Scrape current page for all links
+        link_list = get_links(base_url + current_page_link)
+
+
+
         # display remaining turns
         print(f"You have {turn_count - counter} turns left to reach the target page.")
-        # present page titles from links to user TODO print return from scraper method in nice format
+        # present page titles from links to user
+        for index, item in enumerate(link_list):
+            print(index+1, item)
+
         # prompt user to input number corresponding to link or quit
         print("Input the link's corresponding number")
         choice = input("> ")
         # navigate to new page
         choice_index = int(choice) - 1
-        #current_page = link_list[choice_index]
+        key_list = list(link_list)
+        current_page = key_list[choice_index]
+        current_page_link = link_list[current_page]
+
+
         counter += 1
 
     # if current page is the target present with win screen (show path list)
