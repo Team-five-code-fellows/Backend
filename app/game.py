@@ -1,4 +1,7 @@
-base_url = "https://en.wikipedia.org/wiki/"
+from scraper import get_links
+
+base_url = "https://en.wikipedia.org"
+
 
 # print rules
 def print_rules():
