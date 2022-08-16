@@ -20,13 +20,22 @@ def get_links(url):
     #     footer.()
     # for script in res_soup("script"):
     #     script.remove()
-    list_links = res_soup.find("div", {"id": "bodyContent"})
-    parsed_links = []
-    print(list_links)
+    body_content = res_soup.find("div", {"id": "bodyContent"})
+    list_links = body_content.findAll("a")
+    parsed_links = {}
+    pattern = r'href=\"(.+)\"'
+
+   # print(list_links)
     for item in list_links:
-        if "/wiki/" in str(item) and "language" not in str(item):
-            parsed_links.append(item.text)
-    print(parsed_links)
+
+      
+      if "/wiki/" in str(item) and "language" not in str(item):
+          
+          key = item.split(" ")[0]
+          value = item.split(" ")[1]
+          parsed_links.update({key:value}) 
+           # print(re.match(pattern,str(item)))
+      print(parsed_links)
 
 
 get_links(url)
