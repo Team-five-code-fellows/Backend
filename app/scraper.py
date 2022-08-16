@@ -20,7 +20,7 @@ def get_links(url):
     for item in list_links:
       
 
-      if "/wiki/" in str(item) and "/wiki/Category" not in str(item) and '/wiki/Help' not in str(item) and 'class=' not in str(item):
+      if "/wiki/" in str(item) and "/wiki/Category" not in str(item) and '/wiki/Help' not in str(item) and 'class=' not in str(item) and "/wiki/Wikipedia" not in str(item) and "/wiki/Template" not in str(item):
           value = str(item).split(" ")[1]
           parsed_links.update({item.text:value[6:-1]}) 
     return parsed_links
