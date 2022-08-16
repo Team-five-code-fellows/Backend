@@ -6,8 +6,7 @@ base_url = "https://en.wikipedia.org"
 # print rules
 def print_rules():
     print("The goal of this game is to get from a starting article to an ending article using only internal wikipedia links!")
-    print(
-        "To play the game, all you have to do is select the number that corresponds to the next page you want to move to.")
+    print("To play the game, all you have to do is select the number that corresponds to the next page you want to move to.")
     print("ex. if you want to choose '7. North America', you would input '7'.\n")
     print("Would you like to (p)lay or (q)uit?")
     return input("> ")
@@ -38,16 +37,16 @@ def play_game():
 
     # get random pages
     if mode == 'r':
-        pass # TODO add scraper method with default input
-        # TODO if both grabbed pages are the same, get a new end page
+        start_page = base_url + "/wiki/Special:Random"
+        end_page = base_url + "/wiki/Special:Random"
     # get user input pages
-    if mode == 'm': # subject to change
-        print("Select your starting article")
+    if mode == 'm':
+        print("Input your starting article")
         start_page_query = input("> ")
-        # TODO scrape search query page for article
+        start_page = base_url + "/wiki/" + start_page_query
         print("Select your ending article")
         end_page_query = input("> ")
-        # TODO scrape search query page for article
+        end_page = base_url + "/wiki/" + end_page_query
 
     counter = 0
     current_page = start_page
