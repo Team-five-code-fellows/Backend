@@ -49,16 +49,15 @@ def play_game():
         end_page = base_url + "/wiki/" + end_page_query
 
     counter = 0
-    current_page = start_page
+    current_page_link = start_page
 
     # loop that contains turn actions
 
-    # while counter < turn_count and current_page != end_page:
-    while counter < turn_count:
+    while counter < turn_count and current_page_link != end_page:
         # add current page to page path list
-        path.append(current_page)# TODO append scrubbed value of page
+        #path.append(current_page)# TODO append scrubbed value of page
         # Scrape current page for all links
-        link_list = get_links(base_url + current_page_link)
+        link_list = get_links(current_page_link)
 
 
 
@@ -75,18 +74,18 @@ def play_game():
         choice_index = int(choice) - 1
         key_list = list(link_list)
         current_page = key_list[choice_index]
-        current_page_link = link_list[current_page]
+        current_page_link = base_url + link_list[current_page]
 
 
         counter += 1
 
     # if current page is the target present with win screen (show path list)
-    if current_page == end_page:
+    if current_page_link == end_page:
         print("Congrats!")
         print(f"It took you {counter} turns to get from {start_page} to {end_page}!")
         print(f"The path you took was {path}.") #TODO format path nicely
     # if current page is not the target present with loss screen
-    if current_page != end_page:
+    if current_page_link != end_page:
         print("Aw shucks! Better luck next time!")
         print("Would you like to see the path you took?")
         print("y/n")
