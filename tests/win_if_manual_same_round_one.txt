@@ -17,7 +17,7 @@ Good Luck!
 
 Congrats!
 It took you 0 turns to get from Chocolate to Chocolate!
-The path you took was .
+The path you took was Chocolate.
 Would you like to (p)lay again or (q)uit?
 > q
 Okay, thanks for stopping by!

@@ -131,7 +131,7 @@ Input the link's corresponding number
 > 5
 Congrats!
 It took you 1 turns to get from Peter Flanagan to Hull F.C.!
-The path you took was ['Hull F.C.'].
+The path you took was Peter Flanagan -> Hull F.C..
 Would you like to (p)lay again or (q)uit?
 > q
 Okay, thanks for stopping by!
