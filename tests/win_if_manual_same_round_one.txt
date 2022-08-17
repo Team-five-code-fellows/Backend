@@ -1,0 +1,25 @@
+Welcome to 5 Degrees of Wiki!
+Would you like to (p)lay, (q)uit, or see (r)ules?
+> p
+Choose difficulty:
+(e)asy (50 rounds) | (m)edium (10 rounds) | (h)ard (5 rounds)
+> h
+Choose mode:
+(r)andom (let the program choose your start and end page) | (m)anual (choose the start and end page yourself)
+> m
+Input your starting article
+> chocolate
+Select your ending article
+> chocolate
+Your starting page is Chocolate and your goal is to reach Chocolate.
+You can enter 'q' to quit at any time.
+Good Luck!
+
+Congrats!
+It took you 0 turns to get from Chocolate to Chocolate!
+The path you took was .
+Would you like to (p)lay again or (q)uit?
+> q
+Okay, thanks for stopping by!
+This project was created by:
+BIOS GO HERE

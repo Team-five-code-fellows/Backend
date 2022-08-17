@@ -126,8 +126,13 @@ def play_game():
     if get_title(current_page_link) == end_page_title:
         print("Congrats!")
         print(f"It took you {counter} turns to get from {start_page_title} to {end_page_title}!")
-        print(f"The path you took was {path}.") #TODO format path nicely
-    # if current page is not the target present with loss screen
+        path_text = f'The path you took was '
+        for index, item in enumerate(path):
+            if index == len(path) - 1:
+                path_text += item
+            else:
+                path_text += f"{item} -> " 
+        print(f"The path you took was {path_text}.") 
 
     if get_title(current_page_link) != end_page_title:
         print("Aw shucks! Better luck next time!")
