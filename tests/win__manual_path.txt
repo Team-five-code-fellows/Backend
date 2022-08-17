@@ -1,0 +1,139 @@
+Welcome to 5 Degrees of Wiki!
+Would you like to (p)lay, (q)uit, or see (r)ules?
+> p
+Choose difficulty:
+(e)asy (50 rounds) | (m)edium (10 rounds) | (h)ard (5 rounds)
+> h
+Choose mode:
+(r)andom (let the program choose your start and end page) | (m)anual (choose the start and end page yourself)
+> m
+Input your starting article
+> Peter Flanagan
+Select your ending article
+> Hull F.C.
+Your starting page is Peter Flanagan and your goal is to reach Hull F.C..
+You can enter 'q' to quit at any time.
+Good Luck!
+
+You have 5 turns left to reach the target page, Hull F.C..
+You are currently on Peter Flanagan
+1 Peter Flanagan (rugby union)
+2 Hull
+3 Hooker
+4 Hull Kingston Rovers
+5 Hull F.C.
+6 England
+7 Great Britain
+8 nickname
+9 rugby league
+10 hooker
+11 Hull FC
+12 East Riding of Yorkshire
+13 List of Hull Kingston Rovers players
+14 Huddersfield
+15 1962–63 season
+16 Headingley
+17 Rugby Stadium
+18 Leeds
+19 Widnes
+20 1963–64
+21 Challenge Cup
+22 1963–64 season
+23 Wembley Stadium
+24 London
+25 Featherstone Rovers
+26 Yorkshire
+27 County Cup
+28 1966–67 season
+29 1967–68 season
+30 Castleford
+31 1971–72 season
+32 Belle Vue
+33 Wakefield
+34 1975–76
+35 Player's No.6 Trophy
+36 1975–76 season
+37 tbc
+38 Rugby Leaguer
+39 Hull Kingston Rovers squad
+40 Cyril Kellett
+41 tries
+42 try
+43 Alan Burwell
+44 Arthur Bunting
+45 Bob Coverdale
+46 Jim Drake
+47 Brian Tyson
+48 Peter Murphy
+49 Colin Hutton
+50 1963–64 Challenge Cup Final runners-up
+51 Harry Pool
+52 (c)
+53 Great Britain squad
+54 Harry Poole
+55 Willie Aspinall
+56 Tommy Bishop
+57 Ian Brooke
+58 Bill Bryant
+59 Alan Buckley
+60 Bill Burgess
+61 Colin Clarke
+62 Geoff Crewdson
+63 Carl Dooler
+64 Brian Edgar
+65 Terry Fogerty
+66 Ken Gowers
+67 Alan Hardisty
+68 Berwyn Jones
+69 Arthur Keegan
+70 John Mantle
+71 Frank Myler
+72 Bill Ramsey
+73 Ken Roberts
+74 Dave Robinson
+75 Geoff Shelton
+76 Cliff Watson
+77 Geoff Wriglesworth
+78 1968 Rugby League World Cup
+79 Kevin Ashcroft
+80 John Atkinson
+81 Mick Clark
+82 Derek Edwards
+83 Ray French
+84 Bob Haigh
+85 Roger Millward
+86 Arnie Morgan 
+87 Charlie Renilson
+88 Bev Risman
+89 Mick Shoebottom
+90 Clive Sullivan
+91 John Warlow
+92 Chris Young
+93 Bill Fallowfield
+94 David Chisnall
+95 Ray Dutton
+96 Tony Fisher
+97 Dennis Hartley
+98 Keith Hepworth
+99 Chris Hesketh
+100 Syd Hynes
+101 Robert Irving
+102 Doug Laughton
+103 Phil Lowe
+104 Terry Price
+105 Mal Reilly
+106 Barry Seabourne
+107 Alan Smith
+108 Jimmy Thompson
+109 Johnny Ward
+110 Johnny Whiteley
+Input the link's corresponding number
+> 5
+Congrats!
+It took you 1 turns to get from Peter Flanagan to Hull F.C.!
+The path you took was Peter Flanagan -> Hull F.C..
+Would you like to (p)lay again or (q)uit?
+> q
+Okay, thanks for stopping by!
+This project was created by:
+BIOS GO HERE
