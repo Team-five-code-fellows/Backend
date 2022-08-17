@@ -1,4 +1,8 @@
-from scraper import get_links
+
+from app.scraper import get_links, get_title
+
+
+
 
 base_url = "https://en.wikipedia.org"
 
@@ -37,25 +41,30 @@ def play_game():
 
     # get random pages
     if mode == 'r':
-        start_page = base_url + "/wiki/Special:Random"
-        end_page = base_url + "/wiki/Special:Random"
+        start_page_title = get_title(base_url + "/wiki/Special:Random")
+        start_page = base_url + "/wiki/" + start_page_title
+        end_page_title = get_title(base_url + "/wiki/Special:Random")
+        end_page = base_url + "/wiki/" + end_page_title
     # get user input pages
     if mode == 'm':
         print("Input your starting article")
         start_page_query = input("> ")
         start_page = base_url + "/wiki/" + start_page_query
+        start_page_title = get_title(start_page)
         print("Select your ending article")
         end_page_query = input("> ")
         end_page = base_url + "/wiki/" + end_page_query
+        end_page_title = get_title(end_page)
+
 
     counter = 0
     current_page_link = start_page
 
     # loop that contains turn actions
 
-    while counter < turn_count and current_page_link != end_page:
+    while counter < turn_count and get_title(current_page_link) != get_title(end_page):
         # add current page to page path list
-        #path.append(current_page)# TODO append scrubbed value of page
+        # path.append(current_page)# TODO append scrubbed value of page
         # Scrape current page for all links
         link_list = get_links(current_page_link)
 
@@ -80,13 +89,17 @@ def play_game():
         counter += 1
 
     # if current page is the target present with win screen (show path list)
-    if current_page_link == end_page:
+    if get_title(current_page_link) == get_title(end_page):
         print("Congrats!")
-        print(f"It took you {counter} turns to get from {start_page} to {end_page}!")
+        print(f"It took you {counter} turns to get from {start_page_title} to {end_page_title}!")
         print(f"The path you took was {path}.") #TODO format path nicely
     # if current page is not the target present with loss screen
 
-    if current_page_link != end_page:
+    if get_title(current_page_link) != get_title(end_page):
+
+
+
+
         print("Aw shucks! Better luck next time!")
         print("Would you like to see the path you took?")
         print("y/n")
