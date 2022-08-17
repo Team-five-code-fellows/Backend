@@ -81,16 +81,33 @@ def play_game():
         # Scrape current page for all links
         link_list = get_links(current_page_link)
 
+        current_page = get_title(current_page_link)
+        path.append(current_page)
+
         # display remaining turns
         print(f"You have {turn_count - counter} turns left to reach the target page, {end_page_title}.")
         print(f"You are currently on {get_title(current_page_link)}")
+        print("Press enter to continue")
+        input("> ")
+
+
         # present page titles from links to user
         for index, item in enumerate(link_list):
             print(index+1, item)
+            if index == len(link_list)-1:
+                 # prompt user to input number corresponding to link or quit
+                print("Input the link's corresponding number")
+                choice = input("> ")
+                
+            elif (index % 20) == 0 and index != 0:
 
-        # prompt user to input number corresponding to link or quit
-        print("Input the link's corresponding number")
-        choice = input("> ")
+                print("Input the link's corresponding number or press Enter to see the next page.")
+                choice = input("> ")
+                if choice != "":
+                    break
+
+            
+         
 
         # check user input
         choice_switch = False
@@ -116,9 +133,10 @@ def play_game():
         key_list = list(link_list)
         current_page = key_list[choice_index]
         
+        
 
         current_page_link = base_url + link_list[current_page]
-        path.append(current_page)
+        
 
         counter += 1
 
