@@ -70,6 +70,8 @@ def play_game():
 
     counter = 0
     current_page_link = start_page
+    current_page = get_title(current_page_link)
+    path.append(current_page)
 
     print(f"Your starting page is {start_page_title} and your goal is to reach {end_page_title}.")
     print("You can enter 'q' to quit at any time.")
@@ -80,13 +82,15 @@ def play_game():
         # path.append(current_page)# TODO append scrubbed value of page
         # Scrape current page for all links
         link_list = get_links(current_page_link)
+        
 
-        current_page = get_title(current_page_link)
-        path.append(current_page)
+        
+        
 
         # display remaining turns
         print(f"You have {turn_count - counter} turns left to reach the target page, {end_page_title}.")
         print(f"You are currently on {get_title(current_page_link)}")
+        print(f"There are {len(link_list)} links in this article")
         print("Press enter to continue")
         input("> ")
 
@@ -135,13 +139,17 @@ def play_game():
 
         current_page_link = base_url + link_list[current_page]
         
-
+        path.append(current_page)
         counter += 1
+        
 
     # if current page is the target present with win screen (show path list)
     if get_title(current_page_link) == end_page_title:
         print("Congrats!")
-        print(f"It took you {counter} turns to get from {start_page_title} to {end_page_title}!")
+        if counter == 1 :
+            print(f"It took you {counter} turn to get from {start_page_title} to {end_page_title}!")
+        else:
+            print(f"It took you {counter} turns to get from {start_page_title} to {end_page_title}!")
         path_text = f'The path you took was '
         for index, item in enumerate(path):
             if index == len(path) - 1:
