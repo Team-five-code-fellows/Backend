@@ -1,4 +1,4 @@
-from app.scraper import get_links, get_title
+from scraper import get_links, get_title
 
 base_url = "https://en.wikipedia.org"
 
@@ -118,7 +118,7 @@ def play_game():
         
 
         current_page_link = base_url + link_list[current_page]
-        path.append({current_page:current_page_link})
+        path.append(current_page)
 
         counter += 1
 
@@ -135,7 +135,13 @@ def play_game():
         print("y/n")
         view_path = input("> ")
         if view_path == 'y':
-            print(f"The path you took was {path}.")  # TODO format path nicely
+            path_text = f'The path you took was '
+            for index, item in enumerate(path):
+                if index == len(path) - 1:
+                    path_text += item
+                else:
+                    path_text += f"{item} -> " 
+            print(path_text) 
 
     # ask if the user would like to play again or quit
     print("Would you like to (p)lay again or (q)uit?")
