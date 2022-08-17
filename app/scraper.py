@@ -5,7 +5,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 soup = BeautifulSoup
 
 
@@ -16,14 +15,18 @@ def get_links(url):
     list_links = body_content.findAll("a")
     parsed_links = {}
 
-
     for item in list_links:
-      
 
-      if "/wiki/" in str(item) and "/wiki/Category" not in str(item) and '/wiki/Help' not in str(item) and 'class=' not in str(item) and "/wiki/Wikipedia" not in str(item) and "/wiki/Template" not in str(item):
-          value = str(item).split(" ")[1]
-          parsed_links.update({item.text:value[6:-1]}) 
+        if "/wiki/" in str(item) and "/wiki/Category" not in str(item) and '/wiki/Help' not in str(
+                item) and 'class=' not in str(item) and "/wiki/Wikipedia" not in str(
+                item) and "/wiki/Template" not in str(item):
+            value = str(item).split(" ")[1]
+            parsed_links.update({item.text: value[6:-1]})
     return parsed_links
 
 
-
+def get_title(url):
+    response = requests.get(url)
+    res_soup = soup(response.content, "html.parser")
+    title = res_soup.find("h1")
+    return title.text
