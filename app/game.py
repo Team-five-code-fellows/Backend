@@ -95,7 +95,7 @@ def play_game():
         for index, item in enumerate(link_list):
             print(index+1, item)
             if index == len(link_list)-1:
-                 # prompt user to input number corresponding to link or quit
+                # prompt user to input number corresponding to link or quit
                 print("Input the link's corresponding number")
                 choice = input("> ")
                 
@@ -106,8 +106,6 @@ def play_game():
                 if choice != "":
                     break
 
-            
-         
 
         # check user input
         choice_switch = False
@@ -150,7 +148,7 @@ def play_game():
                 path_text += item
             else:
                 path_text += f"{item} -> " 
-        print(f"The path you took was {path_text}.") 
+        print(f"{path_text}.") 
 
     if get_title(current_page_link) != end_page_title:
         print("Aw shucks! Better luck next time!")
