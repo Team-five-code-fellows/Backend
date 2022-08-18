@@ -100,6 +100,7 @@ def play_game():
         # display remaining turns
         print(f"You have {turn_count - counter} turns left to reach the target page, {end_page_title}.")
         print(f"You are currently on {get_title(current_page_link)}")
+        print(f"There are {len(link_list)} links in this article.")
         print("Press enter to continue")
         input("> ")
 
