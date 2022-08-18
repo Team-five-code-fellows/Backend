@@ -1,7 +1,6 @@
 from app.scraper import get_links, get_title
 import builtins
 
-
 base_url = "https://en.wikipedia.org"
 
 
@@ -94,13 +93,16 @@ def play_game():
         # path.append(current_page)# TODO append scrubbed value of page
         # Scrape current page for all links
         link_list = get_links(current_page_link)
+        
+
 
         current_page = get_title(current_page_link)
+
 
         # display remaining turns
         print(f"You have {turn_count - counter} turns left to reach the target page, {end_page_title}.")
         print(f"You are currently on {get_title(current_page_link)}")
-        print(f"There are {len(link_list)} links in this article.")
+        print(f"There are {len(link_list)} links in this article")
         print("Press enter to continue")
         input("> ")
 
@@ -109,7 +111,7 @@ def play_game():
         for index, item in enumerate(link_list):
             print(index+1, item)
             if index == len(link_list)-1:
-                 # prompt user to input number corresponding to link or quit
+                # prompt user to input number corresponding to link or quit
                 print("Input the link's corresponding number")
                 choice = input("> ")
                 
@@ -120,8 +122,6 @@ def play_game():
                 if choice != "":
                     break
 
-            
-         
 
         # check user input
         choice_switch = False
@@ -153,18 +153,24 @@ def play_game():
         path.append(current_page)
 
         counter += 1
+        
 
     # if current page is the target present with win screen (show path list)
     if get_title(current_page_link) == end_page_title:
         print("Congrats!")
-        print(f"It took you {counter} turns to get from {start_page_title} to {end_page_title}!")
-        path_text = f''
+        
+        if counter == 1 :
+            print(f"It took you {counter} turn to get from {start_page_title} to {end_page_title}!")
+        else:
+            print(f"It took you {counter} turns to get from {start_page_title} to {end_page_title}!")
+        path_text = f'The path you took was '
+
         for index, item in enumerate(path):
             if index == len(path) - 1:
                 path_text += item
             else:
                 path_text += f"{item} -> " 
-        print(f"The path you took was {path_text}.") 
+        print(f"{path_text}.") 
 
     if get_title(current_page_link) != end_page_title:
         print("Aw shucks! Better luck next time!")
