@@ -1,4 +1,4 @@
-from scraper import get_links, get_title
+from app.scraper import get_links, get_title
 
 base_url = "https://en.wikipedia.org"
 
