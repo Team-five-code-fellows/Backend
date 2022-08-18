@@ -1,4 +1,6 @@
-from scraper import get_links, get_title
+from app.scraper import get_links, get_title
+import builtins
+
 
 base_url = "https://en.wikipedia.org"
 
@@ -13,8 +15,18 @@ def print_rules():
 
 def quit_game():
     print("Okay, thanks for stopping by!")
-    print("This project was created by:")
-    print("BIOS GO HERE")
+    print("This project was created by")
+    print("""Dana Huffman:
+    https://github.com/dLeigh01
+Falashade Greene:
+    https://github.com/falashadegreene
+Gina Napier:
+    https://github.com/gina305
+Vinny Shipley:
+    https://github.com/VinnyShipley
+Jamall Malik:
+    https://github.com/JamallM1
+""")
 
 
 def play_game():
@@ -70,6 +82,8 @@ def play_game():
 
     counter = 0
     current_page_link = start_page
+    current_page = get_title(current_page_link)
+    path.append(current_page)
 
     print(f"Your starting page is {start_page_title} and your goal is to reach {end_page_title}.")
     print("You can enter 'q' to quit at any time.")
@@ -82,7 +96,6 @@ def play_game():
         link_list = get_links(current_page_link)
 
         current_page = get_title(current_page_link)
-        path.append(current_page)
 
         # display remaining turns
         print(f"You have {turn_count - counter} turns left to reach the target page, {end_page_title}.")
@@ -136,7 +149,7 @@ def play_game():
         
 
         current_page_link = base_url + link_list[current_page]
-        
+        path.append(current_page)
 
         counter += 1
 
@@ -144,7 +157,7 @@ def play_game():
     if get_title(current_page_link) == end_page_title:
         print("Congrats!")
         print(f"It took you {counter} turns to get from {start_page_title} to {end_page_title}!")
-        path_text = f'The path you took was '
+        path_text = f''
         for index, item in enumerate(path):
             if index == len(path) - 1:
                 path_text += item
@@ -170,18 +183,56 @@ def play_game():
     print("Would you like to (p)lay again or (q)uit?")
     return input("> ")
 
-# print welcome message
-print("Welcome to 5 Degrees of Wiki!")
-print("Would you like to (p)lay, (q)uit, or see (r)ules?")
-start_choice = input("> ")
+def mocker(responses):
+    output = ''
+    def mock_input(*args, **kwargs):
+        response = responses.pop(0)
+        print(f"> {response}")
+        return response
 
-# print rules
-if start_choice == 'r':
-    start_choice = print_rules()
-# play game
-if start_choice == 'p':
-    while start_choice == 'p':
-        start_choice = play_game()
-# quit program, print creator info
-if start_choice == 'q':
-    quit_game()
+    def mock_print(*args, **kwargs):
+        nonlocal output
+        output += str(args[0]) + "\n"
+        return
+
+    real_print = builtins.print
+    builtins.print = mock_print
+
+    real_input = builtins.input
+    builtins.input = mock_input
+
+    # print welcome message
+    print("Welcome to 5 Degrees of Wiki!")
+    print("Would you like to (p)lay, (q)uit, or see (r)ules?")
+    start_choice = input("> ")
+
+    # print rules
+    if start_choice == 'r':
+        start_choice = print_rules()
+    # play game
+    if start_choice == 'p':
+        while start_choice == 'p':
+            start_choice = play_game()
+    # quit program, print creator info
+    if start_choice == 'q':
+        quit_game()
+
+    return output
+
+if __name__ == '__main__':
+
+    # print welcome message
+    print("Welcome to 5 Degrees of Wiki!")
+    print("Would you like to (p)lay, (q)uit, or see (r)ules?")
+    start_choice = input("> ")
+
+    # print rules
+    if start_choice == 'r':
+        start_choice = print_rules()
+    # play game
+    if start_choice == 'p':
+        while start_choice == 'p':
+            start_choice = play_game()
+    # quit program, print creator info
+    if start_choice == 'q':
+        quit_game()
