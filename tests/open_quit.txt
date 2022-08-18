@@ -1,0 +1,6 @@
+Welcome to 5 Degrees of Wiki!
+Would you like to (p)lay, (q)uit, or see (r)ules?
+> q
+Okay, thanks for stopping by!
+This project was created by:
+BIOS GO HERE
