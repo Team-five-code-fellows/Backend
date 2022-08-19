@@ -17,6 +17,7 @@ Good Luck!
 
 You have 10 turns left to reach the target page, Coffee.
 You are currently on Tea
+There are 508 links in this article
 Press enter to continue
 >
 1 Camellia sinensis
@@ -43,7 +44,7 @@ Press enter to continue
 Input the link's corresponding number or press Enter to see the next page.
 > 503
 Congrats!
-It took you 1 turns to get from Tea to Coffee!
+It took you 1 turn to get from Tea to Coffee!
 The path you took was Tea -> Coffee.
 Would you like to (p)lay again or (q)uit?
 > q
@@ -59,4 +60,3 @@ Vinny Shipley:
     https://github.com/VinnyShipley
 Jamall Malik:
     https://github.com/JamallM1
-
