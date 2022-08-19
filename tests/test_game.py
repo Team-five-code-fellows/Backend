@@ -1,11 +1,6 @@
 import pytest
 from app.game import mocker
 
-def get_local_page(name):
-    with open(f"tests/{name}.html") as f:
-        return f.read()
-
-
 
 def test_quit():
     with open("tests/open_quit.txt", 'r') as f:
