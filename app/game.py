@@ -191,15 +191,18 @@ def play_game():
     return input("> ")
 
 def mocker(responses):
-    output = ''
+    output = []
     def mock_input(*args, **kwargs):
         response = responses.pop(0)
-        print(f"> {response}")
+        print(f"> {response}".strip())
         return response
 
     def mock_print(*args, **kwargs):
         nonlocal output
-        output += str(args[0]) + "\n"
+        if len(args) == 1:
+            output.append(str(args[0]))
+        else:
+            output.append(f"{args[0]} {args[1]}")
         return
 
     real_print = builtins.print
@@ -224,7 +227,8 @@ def mocker(responses):
     if start_choice == 'q':
         quit_game()
 
-    return output
+    formatted_output = "\n".join(output)
+    return formatted_output
 
 if __name__ == '__main__':
 

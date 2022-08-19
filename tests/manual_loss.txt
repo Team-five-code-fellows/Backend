@@ -1,0 +1,175 @@
+Welcome to 5 Degrees of Wiki!
+Would you like to (p)lay, (q)uit, or see (r)ules?
+> p
+Choose difficulty:
+(e)asy (50 rounds) | (m)edium (10 rounds) | (h)ard (5 rounds)
+> h
+Choose mode:
+(r)andom (let the program choose your start and end page) | (m)anual (choose the start and end page yourself)
+> m
+Input your starting article
+> road
+Select your ending article
+> buildings
+Your starting page is Road and your goal is to reach Building.
+You can enter 'q' to quit at any time.
+Good Luck!
+
+You have 5 turns left to reach the target page, Building.
+You are currently on Road
+There are 840 links in this article
+Press enter to continue
+>
+1 Public infrastructure
+2 Assets
+3 Airports
+4 Bridges
+5 Broadband
+6 Canals
+7 Coastal management
+8 Critical infrastructure
+9 Dams
+10 Electricity
+11 Energy
+12 Hazardous waste
+13 Hospitals
+14 Levees
+15 Lighthouses
+16 Parks
+17 Pipeline transport
+18 Ports
+19 Mass transit
+20 Public housing
+21 State schools
+Input the link's corresponding number or press Enter to see the next page.
+> 2
+You have 4 turns left to reach the target page, Building.
+You are currently on Fixed asset
+There are 88 links in this article
+Press enter to continue
+>
+1 Accounting
+2 Historical cost
+3 Constant purchasing power
+4 Management
+5 Tax
+6 Audit
+7 Budget
+8 Cost
+9 Forensic
+10 Financial
+11 Fund
+12 Governmental
+13 Social
+14 Accounting period
+15 Accrual
+16 Economic entity
+17 Fair value
+18 Going concern
+19 Matching principle
+20 Materiality
+21 Revenue recognition
+Input the link's corresponding number or press Enter to see the next page.
+> 5
+You have 3 turns left to reach the target page, Building.
+You are currently on Tax
+There are 746 links in this article
+Press enter to continue
+>
+1 fiscal policy
+2 Policies
+3 Government revenue
+4 Property tax equalization
+5 Tax revenue
+6 Non-tax revenue
+7 Tax law
+8 Tax bracket
+9 Tax threshold
+10 Exemption
+11 Credit
+12 Deduction
+13 Tax shift
+14 Tax cut
+15 Tax holiday
+16 Tax advantage
+17 Tax incentive
+18 Tax reform
+19 Tax harmonization
+20 Tax competition
+21 Tax withholding
+Input the link's corresponding number or press Enter to see the next page.
+> 6
+You have 2 turns left to reach the target page, Building.
+You are currently on Non-tax revenue
+There are 99 links in this article
+Press enter to continue
+>
+1 Public finance
+2 Policies
+3 Agricultural
+4 Economic
+5 Energy
+6 Industrial
+7 Investment
+8 Social
+9 Fiscal
+10 Monetary
+11 Policy mix
+12 Fiscal policy
+13 Budget
+14 policy
+15 Debt
+16 internal
+17 Finance ministry
+18 Fiscal union
+19 Revenue
+20 Spending
+21 deficit
+Input the link's corresponding number or press Enter to see the next page.
+> 5
+You have 1 turns left to reach the target page, Building.
+You are currently on Energy policy
+There are 494 links in this article
+Press enter to continue
+>
+1 Energy Policy (journal)
+2 Southern Gas Corridor
+3 Shah Deniz gas field
+4 Azerbaijan
+5 energy development
+6 distribution
+7 use
+8 greenhouse gas emissions
+9 climate change mitigation
+10 legislation
+11 energy conservation
+12 taxation
+13 Energy planning
+14 emits more greenhouse gas
+15 energy crisis
+16 climate change
+17  business
+18 climate and energy
+19 efficient energy use
+20  renewable-energy commercialization
+21 economic model
+Input the link's corresponding number or press Enter to see the next page.
+> 5
+Aw shucks! Better luck next time!
+Would you like to see the path you took?
+y/n
+> n
+Would you like to (p)lay again or (q)uit?
+> q
+Okay, thanks for stopping by!
+This project was created by
+Dana Huffman:
+    https://github.com/dLeigh01
+Falashade Greene:
+    https://github.com/falashadegreene
+Gina Napier:
+    https://github.com/gina305
+Vinny Shipley:
+    https://github.com/VinnyShipley
+Jamall Malik:
+    https://github.com/JamallM1
